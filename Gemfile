@@ -5,11 +5,11 @@ gem 'forem-theme-base', :git => "git://github.com/radar/forem-theme-base"
 gemspec
 
 gem 'sqlite3', :platform => :ruby
-gem 'pg'
+# gem 'pg'
 gem 'mysql2'
 
-gem 'pry-rails'
-gem 'pry-nav'
+# gem 'pry-rails'
+# gem 'pry-nav'
 
 gem 'localeapp'
 
