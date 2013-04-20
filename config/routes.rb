@@ -2,7 +2,7 @@ Forem::Engine.routes.draw do
   root :to => "forums#index"
 
   resources :forums, :only => [:index, :show], :path => '/' do
-    resources :topics, :path => 't' do
+    resources :topics, :path => '-' do
       member do
         get :subscribe
         get :unsubscribe
