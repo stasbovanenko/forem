@@ -2,12 +2,15 @@ Forem::Engine.routes.draw do
   root :to => "forums#index"
 
   resources :forums, :only => [:index, :show], :path => '/' do
-    resources :topics, :path => '-' do
+    
+    resources :topics, :only => [:new, :create, :show, :destroy], :path => '' do
       member do
         get :subscribe
         get :unsubscribe
       end
     end
+
+    # match "/:topic_id" => "topics#show", :as => 'forum_topic'
   end
 
   resources :topics, :only => [:new, :create, :index, :show, :destroy] do
